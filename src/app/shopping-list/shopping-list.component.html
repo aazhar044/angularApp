@@ -2,6 +2,18 @@
   <div class="col-10">
     <app-shopping-edit></app-shopping-edit>
     <hr>
-    <p>The List</p>
+    <!-- <p>The List</p> -->
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor:pointer"
+        *ngFor="let ingredient of ingredients"
+        >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+      <!-- we used the ngFor for loop through all items and then we display the name of ingredient and after it we used () parentesig
+      which means angular syntax normally used to  dispaly text -->
+    </ul>
+    <!-- So to display the shopping list we need an array in component ts file -->
   </div>
 </div>

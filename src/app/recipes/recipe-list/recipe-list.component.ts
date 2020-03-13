@@ -16,8 +16,13 @@ export class RecipeListComponent implements OnInit {
 
   recipes:Recipe[]=[
     //Lets start with a new dummy recipe
-    new Recipe('A test Recipe', 'This is simply a taste', 'https://pixabay.com/photos/food-meat-recipe-power-pork-1459693/' )
+    //As here we are calling below a class as method means actually calling  a constructor
+    new Recipe('A test Recipe', 'This is simply a taste', 'http://appsgeyser.com/blog/wp-content/uploads/2016/12/recipe-icon-6.png' ),
+    new Recipe('A test of Flavour', 'This is simply a taste', 'http://appsgeyser.com/blog/wp-content/uploads/2016/12/recipe-icon-6.png' )
   ];
+
+  //As we have added the constructor but we are unable to see anything for now
+  //To see that we have to do something inside the template of recipe-list.component.html
 
   constructor() { }
 

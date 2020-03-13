@@ -1,1 +1,40 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-12">
+    <!-- Here inside anchor we use ngFor for repeating the recipes -->
+    <a href="#"
+       class="list-group-item clearfix"
+       *ngFor="let recipe of recipes">
+      <div class="row">
+        <div class="col-sm-6">
+          <!-- Now we will use String Intepolation for showing data -->
+            <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+            <p class="list-group-item-text">{{ recipe.description }}</p>
+        </div>
+        <div class="col-sm-6 text-right">
+          <!-- In the image src we can follow to approach one String Interpolation and another we can
+             bind the src itself and in value simply name no curly bracket [src]="recipe.imagePath" -->
+            <img src="{{ recipe.imagePath }}"
+                 alt="{{ recipe.name }}"
+                 class="image-responsive"
+                  style="max-height: 50px;">
+       </div>
+      </div>
+      <!-- <div class="pull-left">
+        <h4 class="list-group-item-heading">Recipe Name</h4>
+        <p class="list-group-item-text">Description</p>
+      </div>
+      <span class="pull-right">
+        <img src="" alt="RecipeImage" class="image-responsive" style="max-height: 50px;">
+      </span> -->
+    </a>
+    <app-recipe-item></app-recipe-item>
+  </div>
+</div>
+
+
